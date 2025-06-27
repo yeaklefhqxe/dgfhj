@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat - Amore Italiano</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../shared/css/main.css">
+    <link rel="stylesheet" href="../shared/css/components.css">
+    <link rel="stylesheet" href="../shared/css/animations.css">
+    <link rel="stylesheet" href="chats.css">
+</head>
+<body>
+    <div class="chats-container">
+        <!-- Header -->
+        <div class="chats-header">
+            <div class="header-content">
+                <h1 class="page-title" data-translate="chats">Chat</h1>
+                <div class="header-actions">
+                    <button class="header-btn" data-action="refresh-chats">
+                        <i class="fas fa-sync-alt"></i>
+                    </button>
+                    <button class="header-btn">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chats Content -->
+        <div class="chats-content" id="chat-list-view">
+            <div class="chat-list" id="chat-list">
+                <!-- Chat items will be loaded here by JS -->
+            </div>
+            
+            <div class="no-chats" id="no-chats" style="display: none;">
+                <div class="no-chats-content">
+                    <i class="fas fa-comments"></i>
+                    <h3 data-translate="no_chats">Nessuna chat ancora</h3>
+                    <p>Inizia a fare swipe per ottenere i tuoi primi match!</p>
+                    <button class="btn btn-discover" onclick="goToSwipes()">
+                        <span data-translate="discover">Scopri</span>
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Navigation (Standardized) -->
+        <div class="bottom-nav">
+            <div class="nav-container">
+                <div class="nav-menu">
+                    <a href="../swipes/swipes.html" class="nav-item">
+                        <i class="fas fa-search nav-icon"></i>
+                        <span class="nav-label" data-translate="discover">Scopri</span>
+                    </a>
+                    <a href="chats.html" class="nav-item active">
+                        <i class="fas fa-comments nav-icon"></i>
+                        <span class="nav-label" data-translate="chats">Chat</span>
+                        <div class="nav-badge" id="chat-badge" style="display: flex;">0</div>
+                    </a>
+                    <a href="../profile/profile.html" class="nav-item">
+                        <i class="fas fa-user nav-icon"></i>
+                        <span class="nav-label" data-translate="profile">Profilo</span>
+                    </a>
+                    <a href="../notifications/notifications.html" class="nav-item">
+                        <i class="fas fa-bell nav-icon"></i>
+                        <span class="nav-label" data-translate="notifications">Notifiche</span>
+                        <div class="nav-badge" id="notification-badge" style="display: flex;">6</div>
+                    </a>
+                    <a href="../settings/settings.html" class="nav-item">
+                        <i class="fas fa-cog nav-icon"></i>
+                        <span class="nav-label" data-translate="settings">Impostazioni</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for individual chat -->
+    <div class="modal-overlay" id="chat-modal" style="display: none;">
+        <div class="chat-modal-content">
+            <div class="chat-header">
+                <button class="back-btn">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+                <div class="chat-user-info">
+                    <img class="chat-avatar-circle" id="chat-avatar" src="" alt="Profile picture">
+                    <div class="chat-user-details">
+                        <h3 class="chat-user-name" id="chat-user-name"></h3>
+                        <span class="chat-user-status" id="chat-user-status" data-translate="online">Online</span>
+                    </div>
+                </div>
+                <div class="chat-actions">
+                    <button class="header-btn">
+                        <i class="fas fa-video"></i> 
+                    </button>
+                    <button class="header-btn">
+                        <i class="fas fa-phone-alt"></i> 
+                    </button>
+                </div>
+            </div>
+            
+            <div class="chat-messages" id="chat-messages">
+                <!-- Messages will be loaded here -->
+            </div>
+            
+            <div class="chat-input-container">
+                <div class="chat-input-wrapper">
+                    <input type="text" class="chat-input" id="chat-input" data-translate-placeholder="type_message" placeholder="Scrivi un messaggio...">
+                    <button class="send-btn">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay">
+        <div class="loading-spinner">
+            <i class="fas fa-heart"></i>
+        </div>
+        <p data-translate="loading">Caricamento...</p>
+    </div>
+
+    <!-- Toast Container -->
+    <div id="toast-container"></div>
+
+    <!-- Scripts -->
+    <script src="../shared/js/utils.js"></script>
+    <script src="../shared/js/translations.js"></script>
+    <script src="../shared/js/app.js"></script>
+    <script src="chats.js"></script>
+
+    <script>
+        function goToSwipes() {
+            window.location.href = '../swipes/swipes.html';
+        }
+    </script>
+</body>
+</html>

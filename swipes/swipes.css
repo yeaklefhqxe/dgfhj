@@ -1,0 +1,535 @@
+:root {
+    --header-height-sm: 55px;
+    --bottom-nav-height: 70px;
+    --pink-glow-color: rgba(255, 105, 180, 0.4);
+    --red-glow-color: rgba(255, 99, 71, 0.4);
+}
+
+.swipes-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    background: var(--bg-primary);
+}
+
+/* Header Redesign - Modern and Clean */
+.swipes-header {
+    height: var(--header-height-sm);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background: var(--bg-primary);
+    border-bottom: 1px solid var(--border-primary);
+    box-shadow: var(--shadow-sm);
+    color: var(--text-primary);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.app-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-shadow: none;
+    background: none;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: unset;
+    background-clip: unset;
+    letter-spacing: 0.5px;
+}
+
+.swipe-counter {
+    display: none !important;
+}
+
+/* Swipe Area */
+.swipe-area {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-md);
+    padding-bottom: 90px;
+    position: relative;
+}
+
+.card-stack {
+    position: relative;
+    width: 100%;
+    max-width: 350px;
+    height: 80vh;
+    max-height: 550px;
+}
+
+/* Profile Card */
+.profile-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-card);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 0 3px 10px rgba(0, 0, 0, 0.1);
+    cursor: grab;
+    user-select: none;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-card:hover {
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25), 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.profile-card:active {
+    cursor: grabbing;
+    transform: scale(0.98);
+}
+
+.profile-card.dragging {
+    transition: none;
+    z-index: 10;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.3), 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.profile-card:nth-child(2) {
+    transform: scale(0.95) translateY(10px) rotateZ(-2deg);
+    z-index: 1;
+    opacity: 0.8;
+}
+
+.profile-card:nth-child(3) {
+    transform: scale(0.9) translateY(20px) rotateZ(2deg);
+    z-index: 0;
+    opacity: 0.6;
+}
+
+.profile-image {
+    width: 100%;
+    height: 60%;
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.profile-info {
+    padding: var(--spacing-md);
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.profile-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-xs);
+    color: var(--text-primary);
+    letter-spacing: 0.5px;
+}
+
+.profile-age {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.profile-location {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    margin-bottom: var(--spacing-sm);
+}
+
+.profile-bio {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+}
+
+.swipe-indicator {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: rgba(var(--bg-card-rgb), 0.7);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    z-index: 50;
+}
+
+.swipe-indicator:hover {
+    transform: translateY(-50%) scale(1.05);
+}
+
+.swipe-indicator:active {
+    transform: translateY(-50%) scale(0.95);
+    box-shadow: 0 0 15px var(--red-glow-color);
+}
+
+.swipe-indicator-left {
+    left: var(--spacing-md);
+    box-shadow: 0 0 15px var(--red-glow-color);
+}
+
+.swipe-indicator-left:hover {
+    box-shadow: 0 0 25px var(--red-glow-color);
+}
+
+.swipe-indicator-left:active {
+    box-shadow: 0 0 35px var(--red-glow-color);
+}
+
+.swipe-indicator-left i {
+    color: var(--red-color);
+    text-shadow: 0 0 5px rgba(255, 99, 71, 0.8);
+}
+
+.swipe-indicator-right {
+    right: var(--spacing-md);
+    box-shadow: 0 0 15px var(--pink-glow-color);
+}
+
+.swipe-indicator-right:hover {
+    box-shadow: 0 0 25px var(--pink-glow-color);
+}
+
+.swipe-indicator-right:active {
+    box-shadow: 0 0 35px var(--pink-glow-color);
+}
+
+.swipe-indicator-right i {
+    color: var(--primary-color);
+    text-shadow: 0 0 5px rgba(255, 105, 180, 0.8);
+}
+
+
+/* No Profiles / Limit Messages */
+.no-profiles,
+.swipe-limit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: var(--spacing-md);
+    flex: 1;
+    position: absolute;
+    top: var(--header-height-sm);
+    left: 0;
+    right: 0;
+    bottom: var(--bottom-nav-height);
+    background: var(--bg-primary);
+    z-index: 5;
+}
+
+.no-profiles-content,
+.swipe-limit-content {
+    max-width: 300px;
+    padding: var(--spacing-lg);
+    background: transparent;
+    border-radius: var(--radius-xl);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.no-profiles-content i,
+.swipe-limit-content i {
+    font-size: 4rem;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-lg);
+    animation: bounceIn 0.8s ease-out;
+}
+
+.no-profiles-content h3,
+.swipe-limit-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-primary);
+}
+
+.no-profiles-content p,
+.swipe-limit-content p {
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+.btn-dashboard {
+    background: var(--gradient-primary);
+    color: white;
+    border: none;
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-md) var(--spacing-xl);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    box-shadow: 0 4px 10px rgba(var(--primary-color-rgb), 0.3);
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+
+.btn-dashboard:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(var(--primary-color-rgb), 0.4);
+}
+
+/* --- СТАНДАРТИЗИРОВАННАЯ НИЖНЯЯ НАВИГАЦИЯ --- */
+/* Кастомные стили удалены. Стили наследуются из components.css */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--bg-card);
+    border-top: 1px solid var(--border-primary);
+    z-index: 100;
+}
+
+/* Unlock Modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: var(--spacing-lg);
+    animation: fadeIn 0.3s ease-out;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+.modal-content {
+    background: var(--bg-card);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-2xl);
+    max-width: 450px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    animation: zoomIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.modal-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: var(--spacing-lg);
+    color: var(--primary-color);
+}
+
+.modal-body {
+    margin-bottom: var(--spacing-xl);
+}
+
+.modal-body p {
+    margin-bottom: var(--spacing-md);
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.modal-body ul {
+    text-align: left;
+    margin: var(--spacing-lg) 0;
+    padding-left: var(--spacing-xl);
+    list-style: none;
+}
+
+.modal-body li {
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-secondary);
+    position: relative;
+    padding-left: var(--spacing-lg);
+    font-size: 1rem;
+}
+
+.modal-body li::before {
+    content: '✅';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+.modal-footer .btn {
+    background: var(--gradient-primary);
+    color: white;
+    border-radius: var(--radius-full);
+    padding: var(--spacing-md) var(--spacing-2xl);
+    font-size: 1.2rem;
+    font-weight: 600;
+    box-shadow: var(--shadow-primary);
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.modal-footer .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-primary-hover);
+}
+
+/* Loading Overlay */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 9999;
+}
+
+.loading-overlay.active {
+    display: flex;
+}
+
+.loading-spinner {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--gradient-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--spacing-lg);
+    animation: spin 2s linear infinite;
+}
+
+.loading-spinner i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    /* ... (остальной код без изменений) */
+}
+
+@media (max-width: 480px) {
+    /* ... (остальной код без изменений) */
+}
+
+@media (max-width: 375px) {
+    /* ... (остальной код без изменений) */
+}
+
+/* Touch-specific styles */
+@media (hover: none) and (pointer: coarse) {
+    /* ... (остальной код без изменений) */
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.8; }
+}
+@keyframes bounceIn {
+    0%, 20%, 40%, 60%, 80%, 100% {
+        -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(.3, .3, .3);
+        transform: scale3d(.3, .3, .3);
+    }
+    20% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1);
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+    40% {
+        -webkit-transform: scale3d(.9, .9, .9);
+        transform: scale3d(.9, .9, .9);
+    }
+    60% {
+        opacity: 1;
+        -webkit-transform: scale3d(1.03, 1.03, 1.03);
+        transform: scale3d(1.03, 1.03, 1.03);
+    }
+    80% {
+        -webkit-transform: scale3d(.97, .97, .97);
+        transform: scale3d(.97, .97, .97);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+/* Swipe Animations */
+.profile-card.swipe-right {
+    transform: translateX(120vw) rotate(45deg);
+    opacity: 0;
+    transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+}
+
+.profile-card.swipe-left {
+    transform: translateX(-120vw) rotate(-45deg);
+    opacity: 0;
+    transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+}

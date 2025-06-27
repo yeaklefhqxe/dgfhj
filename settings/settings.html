@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impostazioni - Amore Italiano</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../shared/css/main.css">
+    <link rel="stylesheet" href="../shared/css/components.css">
+    <link rel="stylesheet" href="../shared/css/animations.css">
+    <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+    <div class="settings-container">
+        <!-- Header -->
+        <div class="settings-header">
+            <button class="back-btn" onclick="goBack()">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            <h1 class="settings-title">Impostazioni</h1>
+            <div class="header-spacer"></div>
+        </div>
+
+        <!-- Settings Content -->
+        <div class="settings-content">
+            <!-- Account Section -->
+            <div class="settings-section">
+                <h2 class="section-title">
+                    <i class="fas fa-user"></i>
+                    Account
+                </h2>
+                <div class="settings-list">
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <i class="fas fa-edit"></i>
+                            <div class="setting-text">
+                                <div class="setting-name">Modifica Profilo</div>
+                                <div class="setting-desc">Aggiorna le tue informazioni</div>
+                            </div>
+                        </div>
+                        <button class="setting-action" onclick="editProfile()">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <i class="fas fa-camera"></i>
+                            <div class="setting-text">
+                                <div class="setting-name">Foto Profilo</div>
+                                <div class="setting-desc">Cambia la tua foto</div>
+                            </div>
+                        </div>
+                        <button class="setting-action" onclick="changePhoto()">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Privacy Section -->
+            <div class="settings-section">
+                <h2 class="section-title">
+                    <i class="fas fa-shield-alt"></i>
+                    Privacy
+                </h2>
+                <div class="settings-list">
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <i class="fas fa-eye"></i>
+                            <div class="setting-text">
+                                <div class="setting-name">Visibilità Profilo</div>
+                                <div class="setting-desc">Chi può vedere il tuo profilo</div>
+                            </div>
+                        </div>
+                        <div class="setting-toggle">
+                            <input type="checkbox" id="visibility-toggle" checked>
+                            <label for="visibility-toggle" class="toggle-label"></label>
+                        </div>
+                    </div>
+                    
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="setting-text">
+                                <div class="setting-name">Mostra Posizione</div>
+                                <div class="setting-desc">Condividi la tua città</div>
+                            </div>
+                        </div>
+                        <div class="setting-toggle">
+                            <input type="checkbox" id="location-toggle" checked>
+                            <label for="location-toggle" class="toggle-label"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Notifications Section -->
+            <div class="settings-section">
+                <h2 class="section-title">
+                    <i class="fas fa-bell"></i>
+                    Notifiche
+                </h2>
+                <div class="settings-list">
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <i class="fas fa-heart"></i>
+                            <div class="setting-text">
+                                <div class="setting-name">Nuovi Match</div>
+                                <div class="setting-desc">Ricevi notifiche per i match</div>
+                            </div>
+                        </div>
+                        <div class="setting-toggle">
+                            <input type="checkbox" id="match-notifications" checked>
+                            <label for="match-notifications" class="toggle-label"></label>
+                        </div>
+                    </div>
+                    
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <i class="fas fa-comment"></i>
+                            <div class="setting-text">
+                                <div class="setting-name">Messaggi</div>
+                                <div class="setting-desc">Ricevi notifiche per i messaggi</div>
+                            </div>
+                        </div>
+                        <div class="setting-toggle">
+                            <input type="checkbox" id="message-notifications" checked>
+                            <label for="message-notifications" class="toggle-label"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- App Section -->
+            <div class="settings-section">
+                <h2 class="section-title">
+                    <i class="fas fa-mobile-alt"></i>
+                    App
+                </h2>
+                <div class="settings-list">
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <i class="fas fa-language"></i>
+                            <div class="setting-text">
+                                <div class="setting-name">Lingua</div>
+                                <div class="setting-desc">Italiano</div>
+                            </div>
+                        </div>
+                        <button class="setting-action" onclick="changeLanguage()">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <i class="fas fa-palette"></i>
+                            <div class="setting-text">
+                                <div class="setting-name">Tema</div>
+                                <div class="setting-desc">Scuro</div>
+                            </div>
+                        </div>
+                        <button class="setting-action" onclick="changeTheme()">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Support Section -->
+            <div class="settings-section">
+                <h2 class="section-title">
+                    <i class="fas fa-question-circle"></i>
+                    Supporto
+                </h2>
+                <div class="settings-list">
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <i class="fas fa-life-ring"></i>
+                            <div class="setting-text">
+                                <div class="setting-name">Centro Assistenza</div>
+                                <div class="setting-desc">FAQ e supporto</div>
+                            </div>
+                        </div>
+                        <button class="setting-action" onclick="openHelp()">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <i class="fas fa-envelope"></i>
+                            <div class="setting-text">
+                                <div class="setting-name">Contattaci</div>
+                                <div class="setting-desc">Invia feedback</div>
+                            </div>
+                        </div>
+                        <button class="setting-action" onclick="contactUs()">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Danger Zone -->
+            <div class="settings-section danger-section">
+                <h2 class="section-title">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    Zona Pericolosa
+                </h2>
+                <div class="settings-list">
+                    <div class="setting-item danger-item">
+                        <div class="setting-info">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <div class="setting-text">
+                                <div class="setting-name">Logout</div>
+                                <div class="setting-desc">Esci dall'account</div>
+                            </div>
+                        </div>
+                        <button class="setting-action danger-action" onclick="logout()">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="setting-item danger-item">
+                        <div class="setting-info">
+                            <i class="fas fa-trash"></i>
+                            <div class="setting-text">
+                                <div class="setting-name">Elimina Account</div>
+                                <div class="setting-desc">Cancella definitivamente</div>
+                            </div>
+                        </div>
+                        <button class="setting-action danger-action" onclick="deleteAccount()">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../shared/js/utils.js"></script>
+    <script src="../shared/js/app.js"></script>
+    <script src="settings.js"></script>
+</body>
+</html>
+

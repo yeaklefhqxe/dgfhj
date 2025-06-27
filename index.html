@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amore Italiano - Exclusive Dating</title>
+    <link rel="stylesheet" href="shared/css/main.css">
+    <link rel="stylesheet" href="shared/css/components.css">
+    <link rel="stylesheet" href="shared/css/animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Language Selection Screen -->
+    <div id="language-screen" class="screen active">
+        <div class="language-container">
+            <div class="hero-section">
+                <div class="logo-section">
+                    <i class="fas fa-heart logo-icon"></i>
+                    <h1 class="app-title">Amore Italiano</h1>
+                    <p class="app-subtitle">Trova il tuo amore perfetto</p>
+                </div>
+                
+                <div class="hero-image">
+                    <div class="floating-hearts">
+                        <i class="fas fa-heart heart-1"></i>
+                        <i class="fas fa-heart heart-2"></i>
+                        <i class="fas fa-heart heart-3"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="language-selection">
+                <h2 class="selection-title">Scegli la tua lingua</h2>
+                <div class="language-options">
+                <button class="language-btn" data-lang="it" onclick="selectLanguage('it')">
+                    <span class="flag">🇮🇹</span>
+                    <span class="lang-text">Italiano</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                
+                <button class="language-btn" data-lang="en" onclick="selectLanguage('en')">
+                    <span class="flag">🇬🇧</span>
+                    <span class="lang-text">English</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>          </div>
+            </div>
+            
+            <div class="footer-text">
+                <p>Incontra persone straordinarie nella tua città</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="screen">
+        <div class="loading-container">
+            <div class="loading-spinner">
+                <i class="fas fa-heart"></i>
+            </div>
+            <h3 class="loading-text">Preparando la tua esperienza...</h3>
+        </div>
+    </div>
+
+    <script src="shared/js/utils.js"></script>
+    <script src="shared/js/translations.js"></script>
+    <script src="shared/js/app.js"></script>
+    <script>
+        function selectLanguage(lang) {
+            localStorage.setItem('selectedLanguage', lang);
+            window.location.href = 'auth/auth.html';
+        }
+        
+        // Check if user is already logged in
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentUser = JSON.parse(localStorage.getItem('currentUser') || 'null');
+            if (currentUser) {
+                if (currentUser.profileComplete) {
+                    if (currentUser.unlocked) {
+                        window.location.href = 'dashboard/dashboard.html';
+                    } else {
+                        window.location.href = 'swipes/swipes.html';
+                    }
+                } else {
+                    window.location.href = 'profile/setup.html';
+                }
+            }
+        });
+    </script>
+    
+    <!-- Toast Container -->
+    <div id="toast-container"></div>
+</body>
+</html>
+

@@ -1,0 +1,251 @@
+{
+  "messages": [
+    {
+      "profileId": 1,
+      "messages": [
+        "Ciao! Mi è piaciuto il tuo profilo! Cosa ti ha colpito?",
+        "Ehi, Sofia qui! Bella foto, complimenti! 😊",
+        "Ciao! Se ti va di chiacchierare, sono qui!"
+      ]
+    },
+    {
+      "profileId": 2,
+      "messages": [
+        "Ciao, Marco! Ti va di fare una passeggiata in bici un giorno?",
+        "Ehi! Il tuo bio mi ha incuriosito, raccontami di più sui tuoi interessi!",
+        "Ciao! Sei un tipo sportivo come me? 😉"
+      ]
+    },
+    {
+      "profileId": 3,
+      "messages": [
+        "Ciao, Giulia! Anch'io amo l'arte! Qual è il tuo artista preferito?",
+        "Hey! Spero di non disturbare, ma la tua galleria è fantastica!",
+        "Ciao! Mi piacerebbe sentire la tua opinione su qualche mostra."
+      ]
+    },
+    {
+      "profileId": 4,
+      "messages": [
+        "Ciao, Alessandro! Che ne dici di scambiarci qualche ricetta?",
+        "Ehi! Sembra che tu sappia il fatto tuo in cucina! Qual è il tuo piatto forte?",
+        "Ciao! Ho visto che sei uno chef, mi hai fatto venire fame! 😂"
+      ]
+    },
+    {
+      "profileId": 5,
+      "messages": [
+        "Ciao, Francesca! Le tue foto sono stupende! Sei una fotografa professionista?",
+        "Ehi! Mi hai davvero colpito con i tuoi scatti. Cosa ti piace fotografare di più?",
+        "Ciao! Se hai qualche consiglio fotografico, sono tutta orecchi!"
+      ]
+    },
+    {
+      "profileId": 6,
+      "messages": [
+        "Ciao, Luca! Che genere di musica ascolti di solito?",
+        "Hey! Ho visto che sei un musicista. Suoni anche dal vivo?",
+        "Ciao! Mi piacerebbe scoprire qualche nuova band grazie a te."
+      ]
+    },
+    {
+      "profileId": 7,
+      "messages": [
+        "Ciao, Valentina! Anche a me interessa molto il benessere. Qual è la tua filosofia?",
+        "Ehi! Il tuo profilo ispira calma e serenità. Mi piace!",
+        "Ciao! Pratico yoga anch'io, magari potremmo scambiarci qualche posizione."
+      ]
+    },
+    {
+      "profileId": 8,
+      "messages": [
+        "Ciao, Matteo! Ti occupi di design? Ho sempre ammirato quell'arte.",
+        "Hey! Cosa ti piace leggere di più? Sono in cerca di nuove idee.",
+        "Ciao! Ho visto che ami viaggiare, qual è stato il tuo viaggio più bello?"
+      ]
+    },
+    {
+      "profileId": 9,
+      "messages": [
+        "Ciao, Chiara! Che grinta che hai! Sei sempre in movimento?",
+        "Hey! Complimenti per gli studi, la medicina è un campo affascinante!",
+        "Ciao! Se hai voglia di sfogarti dopo una giornata di studio, sono qui!"
+      ]
+    },
+    {
+      "profileId": 10,
+      "messages": [
+        "Ciao, Davide! Ho visto che lavori nel tech. Hai qualche progetto interessante in mente?",
+        "Ehi! Amo l'innovazione anch'io. Cosa ti entusiasma di più nel tuo settore?",
+        "Ciao! Sei un vero visionario, mi piace! 😉"
+      ]
+    },
+    {
+      "profileId": 11,
+      "messages": [
+        "Ciao, Elena! Anche a me piace scrivere. Qual è il tuo genere preferito?",
+        "Hey! Ho visto che ami viaggiare. Qual è la tua prossima destinazione da sogno?",
+        "Ciao! Se ti va di parlare di libri o film, sono qui!"
+      ]
+    },
+    {
+      "profileId": 12,
+      "messages": [
+        "Ciao, Riccardo! Che consigli hai per rimettersi in forma?",
+        "Hey! Sembra che tu sia sempre super energico! Qual è il tuo segreto?",
+        "Ciao! Ammiro la tua dedizione allo sport. Mi ispiri!"
+      ]
+    },
+    {
+      "profileId": 13,
+      "messages": [
+        "Ciao, Martina! Che lingue parli? Sono curiosa!",
+        "Hey! Mi piacerebbe conoscere culture diverse. Qual è la tua preferita?",
+        "Ciao! Se hai qualche storia di viaggio da raccontare, sono tutta orecchi!"
+      ]
+    },
+    {
+      "profileId": 14,
+      "messages": [
+        "Ciao, Simone! Anch'io adoro gli animali! Hai qualche animale domestico?",
+        "Hey! È bellissimo che tu sia veterinario. Qual è l'animale che ti ha colpito di più?",
+        "Ciao! Se hai foto dei tuoi amici a quattro zampe, le adoro!"
+      ]
+    },
+    {
+      "profileId": 15,
+      "messages": [
+        "Ciao, Federica! Le tue creazioni di moda sono pazzesche! Da dove prendi ispirazione?",
+        "Hey! Ho visto che sei una designer. Hai qualche consiglio di stile per me?",
+        "Ciao! Amo la moda anch'io. Qual è la tua tendenza preferita del momento?"
+      ]
+    },
+    {
+      "profileId": 16,
+      "messages": [
+        "Ciao, Andrea! Uau, un pilota! Deve essere fantastico volare!",
+        "Hey! Qual è il posto più incredibile che hai visto dal cielo?",
+        "Ciao! Se hai storie di viaggi da raccontare, sono affascinata!"
+      ]
+    },
+    {
+      "profileId": 17,
+      "messages": [
+        "Ciao, Serena! Sei una ballerina? Dev'essere un'arte meravigliosa!",
+        "Hey! Qual è il tuo stile di danza preferito?",
+        "Ciao! Mi piacerebbe vedere uno spettacolo di danza con te un giorno."
+      ]
+    },
+    {
+      "profileId": 18,
+    "messages": [
+        "Ciao, Fabio! Un sommelier? Che lavoro affascinante!",
+        "Hey! Qual è il tuo vino preferito e perché?",
+        "Ciao! Se hai qualche consiglio per una degustazione, sono curiosa!"
+    ]
+    },
+    {
+      "profileId": 19,
+      "messages": [
+        "Ciao, Camilla! La psicologia è un campo così interessante. Cosa ti spinge di più?",
+        "Hey! Ho visto che ami la crescita personale. Hai qualche libro da consigliare?",
+        "Ciao! Mi piace l'idea di equilibrio e benessere. Condividiamo la stessa visione!"
+      ]
+    },
+    {
+      "profileId": 20,
+      "messages": [
+        "Ciao, Lorenzo! Fotografo di matrimoni, catturare l'amore è il mio lavoro. Credo nelle storie d'amore autentiche e nei momenti magici.",
+        "Hey! Qual è la storia d'amore più commovente che hai catturato?",
+        "Ciao! Se ti va di parlare di amore e creatività, sono qui!"
+      ]
+    },
+    {
+      "profileId": 21,
+      "messages": [
+        "Ciao, Sara! Qual è il tuo libro preferito di tutti i tempi?",
+        "Hey! Amo anche io un buon caffè e una buona lettura!",
+        "Ciao! Ti va di consigliarmi qualche autore?"
+      ]
+    },
+    {
+      "profileId": 22,
+      "messages": [
+        "Ciao, Giovanni! Giochi a qualche videogioco in particolare?",
+        "Hey! Sono curiosa di sapere di più sulle tue passioni tecnologiche.",
+        "Ciao! Se hai qualche consiglio su serie sci-fi, sono pronta ad ascoltare!"
+      ]
+    },
+    {
+      "profileId": 23,
+      "messages": [
+        "Ciao, Laura! Che talenti incredibili! Qual è la tua forma d'arte preferita?",
+        "Hey! Hai mai pensato di esporre le tue opere o fare un concerto?",
+        "Ciao! La vita è davvero un palcoscenico, mi piace la tua energia!"
+      ]
+    },
+    {
+      "profileId": 24,
+      "messages": [
+        "Ciao, Antonio! Che avventura l'escursionismo! Qual è stata la tua escursione più memorabile?",
+        "Hey! Se hai bisogno di un compagno per una camminata, fammi sapere!",
+        "Ciao! Le montagne sono magiche, concordo!"
+      ]
+    },
+    {
+      "profileId": 25,
+      "messages": [
+        "Ciao, Chiara! Che stile unico! Dove trovi tutti questi tesori vintage?",
+        "Hey! Mi piacerebbe imparare a scovare pezzi unici come te.",
+        "Ciao! Ogni oggetto ha un'anima, che bella prospettiva!"
+      ]
+    },
+    {
+      "profileId": 26,
+      "messages": [
+        "Ciao, Daniele! Che meraviglia la cucina vegana! Qual è il tuo piatto forte?",
+        "Hey! Mi piacerebbe imparare qualche ricetta sana e gustosa.",
+        "Ciao! Cibo è amore, non potrei essere più d'accordo!"
+      ]
+    },
+    {
+      "profileId": 27,
+      "messages": [
+        "Ciao, Giada! Sei una sognatrice come me! Qual è il tuo prossimo sogno di viaggio?",
+        "Hey! Tra studio e sogni, trovi il tempo per tutto! Grandioso!",
+        "Ciao! Mi piace la tua curiosità verso il mondo."
+      ]
+    },
+    {
+      "profileId": 28,
+      "messages": [
+        "Ciao, Pietro! Un astrofisico! Le stelle mi affascinano. Cosa ti colpisce di più dell'universo?",
+        "Hey! Mi piacerebbe saperne di più sul cosmo da te!",
+        "Ciao! Guardare il cielo e sognare insieme? Mi sembra un'ottima idea!"
+      ]
+    },
+    {
+      "profileId": 29,
+      "messages": [
+        "Ciao, Elisa! Che bel lavoro quello della maestra! Cosa ti piace di più dell'insegnamento?",
+        "Hey! È meraviglioso vedere il mondo attraverso gli occhi dei bambini.",
+        "Ciao! La pazienza è davvero una virtù, complimenti!"
+      ]
+    },
+    {
+      "profileId": 30,
+      "messages": [
+        "Ciao, Simone! Un barista! Amo un buon caffè. Qual è il tuo preferito?",
+        "Hey! Se hai un consiglio per un ottimo caffè, sono tutta orecchi!",
+        "Ciao! La vita è troppo breve per un caffè noioso, verissimo!"
+      ]
+    }
+  ],
+  "defaultMessages": [
+    "Ciao! Come stai? 😊",
+    "Mi piace il tuo profilo!",
+    "Hey! Che fai di bello oggi?",
+    "Ho visto i tuoi interessi, abbiamo qualcosa in comune!",
+    "Spero di non disturbare, ma volevo salutarti!"
+  ]
+}

@@ -1,0 +1,242 @@
+[
+  {
+    "id": 1,
+    "name": "Sofia",
+    "age": 25,
+    "bio": "Amo viaggiare, cucinare e scoprire nuovi posti. Cerco qualcuno con cui condividere avventure e momenti speciali.",
+    "interests": ["Viaggi", "Cucina", "Fotografia", "Arte", "Musica"],
+    "city": "Milano"
+  },
+  {
+    "id": 2,
+    "name": "Marco",
+    "age": 28,
+    "bio": "Appassionato di sport e natura. Mi piace fare escursioni, andare in bicicletta e godermi la vita all'aria aperta.",
+    "interests": ["Sport", "Natura", "Ciclismo", "Fitness", "Viaggi"],
+    "city": "Roma"
+  },
+  {
+    "id": 3,
+    "name": "Giulia",
+    "age": 23,
+    "bio": "Studentessa di arte, amo dipingere e visitare musei. Cerco qualcuno che condivida la mia passione per la cultura.",
+    "interests": ["Arte", "Pittura", "Musei", "Lettura", "Cinema"],
+    "city": "Firenze"
+  },
+  {
+    "id": 4,
+    "name": "Alessandro",
+    "age": 30,
+    "bio": "Chef professionista, amo creare nuovi piatti e sperimentare in cucina. La vita è troppo breve per non godersi il buon cibo!",
+    "interests": ["Cucina", "Gastronomia", "Vino", "Viaggi", "Musica"],
+    "city": "Bologna"
+  },
+  {
+    "id": 5,
+    "name": "Francesca",
+    "age": 26,
+    "bio": "Fotografa freelance, sempre in cerca di nuove prospettive. Mi piace catturare momenti autentici e storie uniche.",
+    "interests": ["Fotografia", "Viaggi", "Arte", "Natura", "Cinema"],
+    "city": "Venezia"
+  },
+  {
+    "id": 6,
+    "name": "Luca",
+    "age": 27,
+    "bio": "Musicista e produttore, vivo per la musica. Suono la chitarra e amo i concerti dal vivo. Cerco qualcuno che ami la musica quanto me.",
+    "interests": ["Musica", "Concerti", "Chitarra", "Composizione", "Arte"],
+    "city": "Napoli"
+  },
+  {
+    "id": 7,
+    "name": "Valentina",
+    "age": 24,
+    "bio": "Insegnante di yoga e amante del benessere. Credo nell'equilibrio tra mente e corpo. Cerco qualcuno che condivida i miei valori.",
+    "interests": ["Yoga", "Meditazione", "Benessere", "Natura", "Lettura"],
+    "city": "Torino"
+  },
+  {
+    "id": 8,
+    "name": "Matteo",
+    "age": 29,
+    "bio": "Architetto con la passione per il design. Mi piace creare spazi belli e funzionali. Nel tempo libero amo leggere e viaggiare.",
+    "interests": ["Architettura", "Design", "Lettura", "Viaggi", "Arte"],
+    "city": "Genova"
+  },
+  {
+    "id": 9,
+    "name": "Chiara",
+    "age": 22,
+    "bio": "Studentessa di medicina, sogno di aiutare le persone. Amo ballare, fare sport e passare tempo con gli amici.",
+    "interests": ["Medicina", "Danza", "Sport", "Amicizia", "Studio"],
+    "city": "Palermo"
+  },
+  {
+    "id": 10,
+    "name": "Davide",
+    "age": 31,
+    "bio": "Imprenditore nel settore tech, sempre alla ricerca di nuove sfide. Mi piace innovare e creare soluzioni creative.",
+    "interests": ["Tecnologia", "Innovazione", "Business", "Lettura", "Sport"],
+    "city": "Milano"
+  },
+  {
+    "id": 11,
+    "name": "Elena",
+    "age": 25,
+    "bio": "Giornalista e scrittrice, amo raccontare storie. Sono curiosa del mondo e delle persone che lo abitano.",
+    "interests": ["Scrittura", "Giornalismo", "Lettura", "Viaggi", "Cinema"],
+    "city": "Roma"
+  },
+  {
+    "id": 12,
+    "name": "Riccardo",
+    "age": 26,
+    "bio": "Personal trainer e nutrizionista, la salute è la mia passione. Mi piace aiutare le persone a raggiungere i loro obiettivi.",
+    "interests": ["Fitness", "Nutrizione", "Sport", "Benessere", "Motivazione"],
+    "city": "Firenze"
+  },
+  {
+    "id": 13,
+    "name": "Martina",
+    "age": 23,
+    "bio": "Studentessa di lingue, amo comunicare con persone di culture diverse. Sogno di viaggiare per il mondo.",
+    "interests": ["Lingue", "Culture", "Viaggi", "Comunicazione", "Lettura"],
+    "city": "Bologna"
+  },
+  {
+    "id": 14,
+    "name": "Simone",
+    "age": 28,
+    "bio": "Veterinario e amante degli animali. Credo che gli animali rendano il mondo un posto migliore. Cerco qualcuno che li ami quanto me.",
+    "interests": ["Animali", "Veterinaria", "Natura", "Escursioni", "Fotografia"],
+    "city": "Venezia"
+  },
+  {
+    "id": 15,
+    "name": "Federica",
+    "age": 27,
+    "bio": "Designer di moda, la creatività è la mia vita. Mi piace sperimentare con colori, tessuti e stili unici.",
+    "interests": ["Moda", "Design", "Creatività", "Arte", "Tendenze"],
+    "city": "Milano"
+  },
+  {
+    "id": 16,
+    "name": "Andrea",
+    "age": 30,
+    "bio": "Pilota commerciale, amo volare e vedere il mondo dall'alto. Ogni viaggio è una nuova avventura da scoprire.",
+    "interests": ["Aviazione", "Viaggi", "Avventura", "Geografia", "Tecnologia"],
+    "city": "Roma"
+  },
+  {
+    "id": 17,
+    "name": "Serena",
+    "age": 24,
+    "bio": "Ballerina professionista, la danza è la mia passione. Mi esprimo attraverso il movimento e cerco qualcuno che apprezzi l'arte.",
+    "interests": ["Danza", "Balletto", "Arte", "Musica", "Performance"],
+    "city": "Napoli"
+  },
+  {
+    "id": 18,
+    "name": "Fabio",
+    "age": 29,
+    "bio": "Sommelier e appassionato di enogastronomia. Amo scoprire nuovi sapori e abbinamenti. La vita è troppo breve per non gustare il meglio!",
+    "interests": ["Vino", "Gastronomia", "Degustazioni", "Cucina", "Cultura"],
+    "city": "Torino"
+  },
+  {
+    "id": 19,
+    "name": "Camilla",
+    "age": 25,
+    "bio": "Psicologa e appassionata di crescita personale. Mi piace aiutare le persone a scoprire il loro potenziale.",
+    "interests": ["Psicologia", "Crescita personale", "Lettura", "Meditazione", "Benessere"],
+    "city": "Firenze"
+  },
+  {
+    "id": 20,
+    "name": "Lorenzo",
+    "age": 26,
+    "bio": "Fotografo di matrimoni, catturare l'amore è il mio lavoro. Credo nelle storie d'amore autentiche e nei momenti magici.",
+    "interests": ["Fotografia", "Matrimoni", "Amore", "Arte", "Creatività"],
+    "city": "Venezia"
+  },
+  {
+    "id": 21,
+    "name": "Sara",
+    "age": 28,
+    "bio": "Amante dei libri e del caffè, la mia libreria è il mio santuario. Cerco qualcuno con cui scambiare opinioni e sorrisi.",
+    "interests": ["Lettura", "Caffè", "Cultura", "Scrittura", "Passeggiate"],
+    "city": "Milano"
+  },
+  {
+    "id": 22,
+    "name": "Giovanni",
+    "age": 32,
+    "bio": "Ingegnere del software, appassionato di tecnologia e videogiochi. Mi piace risolvere problemi complessi e rilassarmi con un buon videogioco.",
+    "interests": ["Tecnologia", "Videogiochi", "Programmazione", "Sci-fi", "Musica"],
+    "city": "Roma"
+  },
+  {
+    "id": 23,
+    "name": "Laura",
+    "age": 27,
+    "bio": "Artista poliedrica, dipingo, scolpisco e canto. La vita è un palcoscenico e ogni giorno è una performance.",
+    "interests": ["Arte", "Pittura", "Scultura", "Canto", "Creatività"],
+    "city": "Napoli"
+  },
+  {
+    "id": 24,
+    "name": "Antonio",
+    "age": 29,
+    "bio": "Escursionista e amante della montagna, le vette sono la mia seconda casa. Cerco compagni per nuove avventure all'aria aperta.",
+    "interests": ["Escursionismo", "Montagna", "Natura", "Fotografia", "Avventura"],
+    "city": "Torino"
+  },
+  {
+    "id": 25,
+    "name": "Chiara",
+    "age": 26,
+    "bio": "Cercatrice di tesori vintage, amo i mercatini delle pulci e le storie che gli oggetti raccontano. Ogni pezzo ha un'anima.",
+    "interests": ["Vintage", "Mercatini", "Moda", "Storia", "Design"],
+    "city": "Firenze"
+  },
+  {
+    "id": 26,
+    "name": "Daniele",
+    "age": 30,
+    "bio": "Chef di cucina vegana, mi piace creare piatti sani e gustosi che rispettano il pianeta. Cibo è amore.",
+    "interests": ["Cucina vegana", "Cucina", "Benessere", "Ambiente", "Fotografia"],
+    "city": "Bologna"
+  },
+  {
+    "id": 27,
+    "name": "Giada",
+    "age": 24,
+    "bio": "Studente di giurisprudenza, ma nel tempo libero sono una sognatrice. Amo viaggiare, leggere e scoprire nuove culture.",
+    "interests": ["Viaggi", "Lettura", "Culturа", "Cinema", "Musica"],
+    "city": "Venezia"
+  },
+  {
+    "id": 28,
+    "name": "Pietro",
+    "age": 31,
+    "bio": "Astrofisico, mi perdo tra le stelle e i misteri dell'universo. Cerco qualcuno con cui guardare il cielo e sognare.",
+    "interests": ["Astronomia", "Scienza", "Universo", "Filosofia", "Natura"],
+    "city": "Genova"
+  },
+  {
+    "id": 29,
+    "name": "Elisa",
+    "age": 29,
+    "bio": "Maestra di scuola elementare, amo lavorare con i bambini e vedere il mondo attraverso i loro occhi. La pazienza è la mia virtù.",
+    "interests": ["Bambini", "Insegnamento", "Lettura", "Creatività", "Natura"],
+    "city": "Palermo"
+  },
+  {
+    "id": 30,
+    "name": "Simone",
+    "age": 27,
+    "bio": "Barista e amante del buon caffè, mi piace sperimentare nuovi blend e creare l'atmosfera perfetta. La vita è troppo breve per un caffè noioso!",
+    "interests": ["Caffè", "Barista", "Musica", "Conversazioni", "Viaggi"],
+    "city": "Bari"
+  }
+]

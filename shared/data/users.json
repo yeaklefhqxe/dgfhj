@@ -1,0 +1,56 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "admin@amore.it",
+      "password": "admin123",
+      "name": "Administrator",
+      "role": "admin",
+      "birthDate": "1990-01-01",
+      "city": "Milano",
+      "bio": "Administrator account for testing",
+      "interests": ["Viaggi", "Cucina", "Sport"],
+      "profileComplete": true,
+      "unlocked": true,
+      "swipeCount": 20,
+      "likesReceived": 5,
+      "matchCount": 3,
+      "createdAt": "2025-06-26T00:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "email": "test@example.com",
+      "password": "password123",
+      "name": "Test User",
+      "role": "user",
+      "birthDate": "1995-05-15",
+      "city": "Roma",
+      "bio": "Test user account",
+      "interests": ["Musica", "Cinema"],
+      "profileComplete": true,
+      "unlocked": true,
+      "swipeCount": 15,
+      "likesReceived": 2,
+      "matchCount": 1,
+      "createdAt": "2025-06-26T00:00:00.000Z"
+    },
+    {
+      "id": 3,
+      "email": "user@test.com",
+      "password": "test123",
+      "name": "Demo User",
+      "role": "user",
+      "birthDate": "1992-08-20",
+      "city": "Napoli",
+      "bio": "Demo account for testing purposes",
+      "interests": ["Arte", "Fotografia", "Natura"],
+      "profileComplete": true,
+      "unlocked": false,
+      "swipeCount": 8,
+      "likesReceived": 1,
+      "matchCount": 0,
+      "createdAt": "2025-06-26T00:00:00.000Z"
+    }
+  ]
+}
+

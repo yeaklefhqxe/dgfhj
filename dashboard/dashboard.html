@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Amore Italiano</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../shared/css/main.css">
+    <link rel="stylesheet" href="../shared/css/components.css">
+    <link rel="stylesheet" href="../shared/css/animations.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Header -->
+        <div class="dashboard-header">
+            <div class="header-content">
+                <div class="user-greeting">
+                    <h1 class="greeting-text">Ciao, <span id="user-name">User</span>!</h1>
+                    <p class="greeting-subtitle">Pronto per nuove avventure?</p>
+                </div>
+                <div class="user-avatar-container">
+                    <img class="user-avatar" id="user-avatar" src="../shared/images/profiles/1.jpg" alt="Profile">
+                    <div class="online-indicator"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats Cards -->
+        <div class="stats-section">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-number" id="total-likes">0</div>
+                        <div class="stat-label">Mi Piace</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-number" id="total-chats">0</div>
+                        <div class="stat-label">Chat Attive</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-number" id="swipes-remaining">15</div>
+                        <div class="stat-label">Swipe Rimasti</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Actions */
+        <div class="quick-actions-section">
+            <h2 class="section-title">Azioni Rapide</h2>
+            <div class="actions-grid">
+                <a href="../swipes/swipes.html" class="action-card primary">
+                    <div class="action-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="action-content">
+                        <h3>Scopri Persone</h3>
+                        <p>Inizia a fare swipe e trova nuovi match</p>
+                    </div>
+                    <div class="action-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </a>
+                
+                <a href="../chats/chats.html" class="action-card">
+                    <div class="action-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div class="action-content">
+                        <h3>Le Tue Chat</h3>
+                        <p>Continua le conversazioni</p>
+                    </div>
+                    <div class="action-badge" id="chat-badge-action" style="display: none;">0</div>
+                    <div class="action-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </a>
+                
+                <a href="../profile/profile.html" class="action-card">
+                    <div class="action-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="action-content">
+                        <h3>Il Tuo Profilo</h3>
+                        <p>Modifica le tue informazioni</p>
+                    </div>
+                    <div class="action-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </a>
+                
+                <a href="../notifications/notifications.html" class="action-card">
+                    <div class="action-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <div class="action-content">
+                        <h3>Notifiche</h3>
+                        <p>Controlla gli aggiornamenti</p>
+                    </div>
+                    <div class="action-badge" id="notification-badge-action" style="display: none;">0</div>
+                    <div class="action-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Recent Activity -->
+        <div class="activity-section">
+            <h2 class="section-title">Attività Recente</h2>
+            <div class="activity-list" id="activity-list">
+                <!-- Activity items will be loaded here -->
+            </div>
+            
+            <div class="no-activity" id="no-activity" style="display: none;">
+                <i class="fas fa-clock"></i>
+                <p>Nessuna attività recente</p>
+            </div>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="bottom-nav">
+            <div class="nav-container">
+                <div class="nav-menu">
+                    <a href="../swipes/swipes.html" class="nav-item">
+                        <i class="fas fa-search nav-icon"></i>
+                        <span class="nav-label" data-translate="discover">Scopri</span>
+                    </a>
+                    <a href="../chats/chats.html" class="nav-item">
+                        <i class="fas fa-comments nav-icon"></i>
+                        <span class="nav-label" data-translate="chats">Chat</span>
+                        <div class="nav-badge" id="chat-badge" style="display: none;">0</div>
+                    </a>
+                    <a href="../profile/profile.html" class="nav-item">
+                        <i class="fas fa-user nav-icon"></i>
+                        <span class="nav-label" data-translate="profile">Profilo</span>
+                    </a>
+                    <a href="../notifications/notifications.html" class="nav-item">
+                        <i class="fas fa-bell nav-icon"></i>
+                        <span class="nav-label" data-translate="notifications">Notifiche</span>
+                        <div class="nav-badge" id="notification-badge" style="display: none;">0</div>
+                    </a>
+                    <a href="../settings/settings.html" class="nav-item">
+                        <i class="fas fa-cog nav-icon"></i>
+                        <span class="nav-label" data-translate="settings">Impostazioni</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="loading-overlay" class="loading-overlay">
+        <div class="loading-spinner">
+            <i class="fas fa-heart"></i>
+        </div>
+        <p data-translate="loading">Caricamento...</p>
+    </div>
+
+    <div id="toast-container"></div>
+
+    <script src="../shared/js/utils.js"></script>
+    <script src="../shared/js/translations.js"></script>
+    <script src="../shared/js/app.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>
+

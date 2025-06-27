@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Completa Profilo - Amore Italiano</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../shared/css/main.css">
+    <link rel="stylesheet" href="../shared/css/components.css">
+    <link rel="stylesheet" href="../shared/css/animations.css">
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <div class="profile-setup-container">
+        <div class="profile-header">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+            <div class="logo-section">
+                <i class="fas fa-heart logo-icon"></i>
+                <h1 class="app-title">Amore Italiano</h1>
+            </div>
+        </div>
+
+        <div class="profile-content">
+            <div class="profile-steps">
+                <!-- Шаг 1: Основная информация -->
+                <div class="step active" id="step-1">
+                    <div class="step-header">
+                        <h2 data-translate="profile_setup_title">Raccontaci di te</h2>
+                        <p data-translate="profile_setup_subtitle">Completa il tuo profilo per iniziare a incontrare persone</p>
+                    </div>
+
+                    <form class="profile-form">
+                        <div class="form-group">
+                            <label class="form-label" data-translate="about_me">Descrizione</label>
+                            <textarea id="about-me" class="form-textarea" rows="4" data-translate-placeholder="about_placeholder" placeholder="Scrivi qualcosa su di te..." required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" data-translate="city">Città</label>
+                            <div class="city-select-container">
+                                <input type="text" id="city-input" class="form-input" data-translate-placeholder="city_placeholder" placeholder="Seleziona la tua città" autocomplete="off" required>
+                                <!-- Атрибут 'readonly' удален для возможности ввода -->
+                                <div class="city-dropdown" id="city-dropdown"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" data-translate="interests">Interessi</label>
+                            <div class="interests-container" id="interests-container">
+                                <!-- Теги интересов будут заполнены здесь -->
+                            </div>
+                        </div>
+
+                        <button type="button" class="btn btn-primary btn-lg" onclick="nextStep()">
+                            <span data-translate="next">Avanti</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Шаг 2: Загрузка фото -->
+                <div class="step" id="step-2">
+                    <div class="step-header">
+                        <h2 data-translate="upload_photo">Carica Foto</h2>
+                        <p data-translate="add_photo_subtitle">Aggiungi una foto per completare il tuo profilo</p>
+                    </div>
+
+                    <div class="photo-upload-section">
+                        <div class="photo-preview" id="photo-preview">
+                            <div class="photo-placeholder">
+                                <i class="fas fa-camera"></i>
+                                <span data-translate="profile_photo">Foto Profilo</span>
+                            </div>
+                        </div>
+
+                        <input type="file" id="photo-input-setup" accept="image/*" style="display: none;">
+
+                        <div class="photo-actions">
+                            <button type="button" class="btn btn-secondary" onclick="selectPhoto()">
+                                <i class="fas fa-upload"></i>
+                                <span data-translate="select_photo">Seleziona Foto</span>
+                            </button>
+                            <!-- Кнопка 'Salta per ora' удалена -->
+                        </div>
+                    </div>
+
+                    <div class="step-actions">
+                        <button type="button" class="btn btn-ghost" onclick="prevStep()">
+                            <i class="fas fa-arrow-left"></i>
+                            <span data-translate="back">Indietro</span>
+                        </button>
+                        <button type="button" class="btn btn-primary btn-lg" onclick="completeProfile()">
+                            <span data-translate="complete_profile">Completa Profilo</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="loading-overlay" class="loading-overlay">
+        <div class="loading-spinner">
+            <i class="fas fa-heart"></i>
+        </div>
+        <p data-translate="loading">Caricamento...</p>
+    </div>
+
+    <div id="toast-container"></div>
+
+    <script src="../shared/js/utils.js"></script>
+    <script src="../shared/js/translations.js"></script>
+    <script src="../shared/js/app.js"></script>
+    <script src="profile.js"></script>
+</body>
+</html>

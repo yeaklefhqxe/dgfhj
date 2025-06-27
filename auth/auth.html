@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrazione - Amore Italiano</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../shared/css/main.css">
+    <link rel="stylesheet" href="../shared/css/components.css">
+    <link rel="stylesheet" href="../shared/css/animations.css">
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-header">
+            <a href="../index.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+            <div class="logo-section">
+                <i class="fas fa-heart logo-icon"></i>
+                <h1 class="app-title">Amore Italiano</h1>
+            </div>
+        </div>
+
+        <div class="auth-content">
+            <div class="auth-tabs">
+                <button class="auth-tab" id="login-tab" onclick="showLogin()">
+                    <span data-translate="login">Accedi</span>
+                </button>
+                <button class="auth-tab active" id="register-tab" onclick="showRegister()">
+                    <span data-translate="register">Registrati</span>
+                </button>
+            </div>
+
+            <div id="login-form" class="form-container">
+                <div class="form-header">
+                    <h2 data-translate="welcome_back">Bentornato!</h2>
+                    <p data-translate="login_subtitle">Accedi per continuare la tua avventura</p>
+                </div>
+                
+                <form id="loginForm" class="auth-form">
+                    <div class="form-group">
+                        <div class="input-container">
+                            <i class="fas fa-envelope input-icon"></i>
+                            <input type="email" id="login-email" data-translate-placeholder="email" placeholder="Email" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="input-container">
+                            <i class="fas fa-lock input-icon"></i>
+                            <input type="password" id="login-password" data-translate-placeholder="password" placeholder="Password" required>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="auth-btn">
+                        <span data-translate="login">Accedi</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </form>
+            </div>
+
+            <div id="register-form" class="form-container active">
+                <div class="form-header">
+                    <h2 data-translate="join_us">Unisciti a noi!</h2>
+                    <p data-translate="register_subtitle">Crea il tuo account per iniziare</p>
+                </div>
+                
+                <form id="registerForm" class="auth-form">
+                    <div class="form-group">
+                        <div class="input-container">
+                            <i class="fas fa-user input-icon"></i>
+                            <input type="text" id="register-name" data-translate-placeholder="full_name" placeholder="Nome completo" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="input-container">
+                            <i class="fas fa-envelope input-icon"></i>
+                            <input type="email" id="register-email" data-translate-placeholder="email" placeholder="Email" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="input-container">
+                            <i class="fas fa-calendar input-icon"></i>
+                            <input type="date" id="register-birthdate" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="input-container">
+                            <i class="fas fa-lock input-icon"></i>
+                            <input type="password" id="register-password" data-translate-placeholder="password" placeholder="Password" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="input-container">
+                            <i class="fas fa-lock input-icon"></i>
+                            <input type="password" id="register-confirm-password" data-translate-placeholder="confirm_password" placeholder="Conferma password" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="terms-checkbox" required>
+                            <span data-translate="terms_accept">Accetto i termini e condizioni</span>
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="auth-btn">
+                        <span data-translate="register">Registrati</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="loading-overlay" class="loading-overlay">
+        <div class="loading-spinner">
+            <i class="fas fa-heart"></i>
+        </div>
+        <p data-translate="loading">Caricamento...</p>
+    </div>
+
+    <div id="toast-container"></div>
+
+    <script src="../shared/js/utils.js"></script>
+    <script src="../shared/js/translations.js"></script>
+    <script src="../shared/js/app.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>
+

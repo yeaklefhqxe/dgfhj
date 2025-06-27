@@ -1,0 +1,70 @@
+{
+  "1": [
+    "Ciao! Come stai?",
+    "Che bella giornata oggi!",
+    "Hai mai visitato le Cinque Terre?",
+    "Mi piace molto la tua foto!",
+    "Cosa fai nel tempo libero?",
+    "Hai qualche ristorante da consigliare?",
+    "Adoro viaggiare, e tu?",
+    "Che tipo di musica ascolti?"
+  ],
+  "2": [
+    "Ehi! Bel profilo!",
+    "Anche tu ami lo sport?",
+    "Hai mai fatto trekking in montagna?",
+    "Che ne dici di una corsa insieme?",
+    "Mi piace il tuo stile!",
+    "Dove ti piace andare in bicicletta?",
+    "Sei mai stato in Patagonia?",
+    "Che sport pratichi?"
+  ],
+  "3": [
+    "Ciao! Sei davvero interessante!",
+    "Che tipo di arte preferisci?",
+    "Hai mai visitato gli Uffizi?",
+    "Mi piacciono molto i tuoi interessi!",
+    "Quale museo consigli?",
+    "Dipingi anche tu?",
+    "Che libro stai leggendo?",
+    "Adoro l'arte contemporanea!"
+  ],
+  "4": [
+    "Ciao chef! 👨‍🍳",
+    "Che piatto sai cucinare meglio?",
+    "Mi insegni una ricetta?",
+    "Adoro la cucina italiana!",
+    "Hai mai lavorato all'estero?",
+    "Quale ingrediente non può mancare?",
+    "Mi piace sperimentare in cucina!",
+    "Che vino abbini alla pasta?"
+  ],
+  "5": [
+    "Ciao! Le tue foto sono bellissime!",
+    "Che macchina fotografica usi?",
+    "Hai mai fatto un reportage?",
+    "Mi piace il tuo stile fotografico!",
+    "Dove hai scattato quella foto?",
+    "Insegni fotografia?",
+    "Preferisci il bianco e nero o colori?",
+    "Che obiettivo consigli?"
+  ],
+  "default": [
+    "Ciao! Come va?",
+    "Che bella giornata!",
+    "Mi piace il tuo profilo!",
+    "Cosa fai di bello?",
+    "Hai piani per il weekend?",
+    "Che ne dici di conoscerci meglio?",
+    "Adoro la tua energia!",
+    "Raccontami di te!",
+    "Che passioni hai?",
+    "Mi fai sorridere! 😊",
+    "Sei molto interessante!",
+    "Dove ti piace andare?",
+    "Che musica ascolti?",
+    "Hai qualche hobby particolare?",
+    "Mi piacerebbe conoscerti!"
+  ]
+}
+

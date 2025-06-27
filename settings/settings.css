@@ -1,0 +1,232 @@
+/* Settings Page Styles */
+.settings-container {
+    min-height: 100vh;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+.settings-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing-lg);
+    background: var(--bg-card);
+    border-bottom: 1px solid var(--border-primary);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.back-btn {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: var(--spacing-sm);
+    border-radius: 50%;
+    transition: var(--transition-fast);
+}
+
+.back-btn:hover {
+    background: var(--bg-hover);
+}
+
+.settings-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.header-spacer {
+    width: 40px; /* Same as back button to center title */
+}
+
+.settings-content {
+    padding: var(--spacing-lg);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.settings-section {
+    margin-bottom: var(--spacing-xl);
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 1px solid var(--border-primary);
+}
+
+.section-title i {
+    color: var(--primary-color);
+}
+
+.settings-list {
+    background: var(--bg-card);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.setting-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing-md);
+    border-bottom: 1px solid var(--border-primary);
+    transition: var(--transition-fast);
+}
+
+.setting-item:last-child {
+    border-bottom: none;
+}
+
+.setting-item:hover {
+    background: var(--bg-hover);
+}
+
+.setting-info {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    flex: 1;
+}
+
+.setting-info i {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    width: 20px;
+    text-align: center;
+}
+
+.setting-text {
+    flex: 1;
+}
+
+.setting-name {
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 2px;
+}
+
+.setting-desc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.setting-action {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    padding: var(--spacing-sm);
+    border-radius: 50%;
+    transition: var(--transition-fast);
+}
+
+.setting-action:hover {
+    background: var(--bg-hover);
+    color: var(--primary-color);
+}
+
+/* Toggle Switch */
+.setting-toggle {
+    position: relative;
+}
+
+.setting-toggle input[type="checkbox"] {
+    display: none;
+}
+
+.toggle-label {
+    display: block;
+    width: 50px;
+    height: 28px;
+    background: var(--bg-secondary);
+    border-radius: 14px;
+    position: relative;
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.toggle-label::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 24px;
+    height: 24px;
+    background: white;
+    border-radius: 50%;
+    transition: var(--transition-fast);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.setting-toggle input[type="checkbox"]:checked + .toggle-label {
+    background: var(--primary-color);
+}
+
+.setting-toggle input[type="checkbox"]:checked + .toggle-label::after {
+    transform: translateX(22px);
+}
+
+/* Danger Zone */
+.danger-section .section-title {
+    color: var(--error-color);
+}
+
+.danger-section .section-title i {
+    color: var(--error-color);
+}
+
+.danger-item {
+    border-left: 3px solid var(--error-color);
+}
+
+.danger-item .setting-name {
+    color: var(--error-color);
+}
+
+.danger-action {
+    color: var(--error-color);
+}
+
+.danger-action:hover {
+    background: rgba(239, 68, 68, 0.1);
+    color: var(--error-color);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .settings-content {
+        padding: var(--spacing-md);
+    }
+    
+    .settings-header {
+        padding: var(--spacing-md);
+    }
+    
+    .setting-item {
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+    
+    .setting-info {
+        gap: var(--spacing-sm);
+    }
+    
+    .setting-name {
+        font-size: 0.95rem;
+    }
+    
+    .setting-desc {
+        font-size: 0.85rem;
+    }
+}
+

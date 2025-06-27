@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profilo - Amore Italiano</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../shared/css/main.css">
+    <link rel="stylesheet" href="../shared/css/components.css">
+    <link rel="stylesheet" href="../shared/css/animations.css">
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <div class="profile-container">
+        <!-- Заголовок -->
+        <div class="profile-header">
+            <div class="header-content">
+                <h1 class="page-title" data-translate="profile">Profilo</h1>
+                <div class="header-actions">
+                    <button class="header-btn" onclick="editProfile()">
+                        <i class="fas fa-edit"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Контент профиля -->
+        <div class="profile-content">
+            <!-- Секция фотографии профиля -->
+            <div class="profile-photo-section">
+                <div class="profile-photo-container">
+                    <img class="profile-photo" id="profile-photo" src="../shared/images/default-avatar.jpg" alt="Profile Photo">
+                    <button class="photo-edit-btn" onclick="changePhoto()">
+                        <i class="fas fa-camera"></i>
+                    </button>
+                </div>
+                <input type="file" id="photo-input" accept="image/*" style="display: none;" onchange="handlePhotoChange(event)">
+            </div>
+
+            <!-- Информация о профиле -->
+            <div class="profile-info-section">
+                <div class="profile-field">
+                    <label class="field-label" data-translate="name">Nome</label>
+                    <div class="field-value" id="profile-name">Test User</div>
+                </div>
+                <div class="profile-field">
+                    <label class="field-label" data-translate="age">Età</label>
+                    <div class="field-value" id="profile-age">25 anni</div>
+                </div>
+                <div class="profile-field">
+                    <label class="field-label" data-translate="city">Città</label>
+                    <div class="field-value" id="profile-city">Milano</div>
+                </div>
+                <div class="profile-field">
+                    <label class="field-label" data-translate="email">Email</label>
+                    <div class="field-value" id="profile-email">test@example.com</div>
+                </div>
+                <div class="profile-field">
+                    <label class="field-label" data-translate="bio">Descrizione</label>
+                    <div class="field-value" id="profile-bio">This is a test description for my profile.</div>
+                </div>
+                <div class="profile-field">
+                    <label class="field-label" data-translate="interests">Interessi</label>
+                    <div class="field-value" id="profile-interests">
+                        <div class="interests-list">
+                            <!-- Интересы будут загружены здесь -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Кнопки действий -->
+            <div class="profile-actions">
+                <button class="btn btn-primary btn-lg" onclick="editProfile()">
+                    <i class="fas fa-edit"></i>
+                    <span data-translate="edit_profile">Modifica</span>
+                </button>
+                <button class="btn btn-secondary btn-lg" onclick="showSettings()">
+                    <i class="fas fa-cog"></i>
+                    <span data-translate="settings">Impostazioni</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- СТАНДАРТИЗИРОВАННАЯ НИЖНЯЯ НАВИГАЦИЯ -->
+        <div class="bottom-nav">
+            <div class="nav-container">
+                <div class="nav-menu">
+                    <a href="../swipes/swipes.html" class="nav-item">
+                        <i class="fas fa-search nav-icon"></i>
+                        <span class="nav-label" data-translate="discover">Scopri</span>
+                    </a>
+                    <a href="../chats/chats.html" class="nav-item">
+                        <i class="fas fa-comments nav-icon"></i>
+                        <span class="nav-label" data-translate="chats">Chat</span>
+                        <div class="nav-badge" id="chat-badge" style="display: none;">0</div>
+                    </a>
+                    <a href="profile.html" class="nav-item active">
+                        <i class="fas fa-user nav-icon"></i>
+                        <span class="nav-label" data-translate="profile">Profilo</span>
+                    </a>
+                    <a href="../notifications/notifications.html" class="nav-item">
+                        <i class="fas fa-bell nav-icon"></i>
+                        <span class="nav-label" data-translate="notifications">Notifiche</span>
+                        <div class="nav-badge" id="notification-badge" style="display: flex;">6</div>
+                    </a>
+                    <a href="../settings/settings.html" class="nav-item">
+                        <i class="fas fa-cog nav-icon"></i>
+                        <span class="nav-label" data-translate="settings">Impostazioni</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно редактирования профиля -->
+    <div class="modal-overlay" id="edit-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 data-translate="edit_profile">Modifica</h2>
+                <button class="close-btn" onclick="closeEditModal()"><i class="fas fa-times"></i></button>
+            </div>
+            <!-- Удаляем modal-body и переносим его содержимое прямо в modal-content -->
+            <form id="edit-form" class="modal-form-content">
+                <div class="form-group">
+                    <label for="edit-name" data-translate="name">Nome</label>
+                    <input type="text" id="edit-name" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="edit-bio" data-translate="bio">Descrizione</label>
+                    <textarea id="edit-bio" class="form-textarea" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="edit-city" data-translate="city">Città</label>
+                    <div class="city-select-container">
+                        <input type="text" id="edit-city" class="form-input" data-translate-placeholder="city_placeholder" placeholder="Seleziona la tua città" autocomplete="off" required>
+                        <div class="city-dropdown" id="edit-city-dropdown"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label data-translate="interests">Interessi</label>
+                    <div class="interests-container-edit" id="edit-interests">
+                        <!-- Теги интересов будут здесь -->
+                    </div>
+                </div>
+            </form>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeEditModal()">
+                    <span data-translate="cancel">Annulla</span>
+                </button>
+                <button class="btn btn-primary" onclick="saveProfile()">
+                    <span data-translate="save">Salva</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="loading-overlay" class="loading-overlay">
+        <div class="loading-spinner">
+            <i class="fas fa-heart"></i>
+        </div>
+        <p data-translate="loading">Caricamento...</p>
+    </div>
+
+    <div id="toast-container"></div>
+
+    <script src="../shared/js/utils.js"></script>
+    <script src="../shared/js/translations.js"></script>
+    <script src="../shared/js/app.js"></script>
+    <script src="profile.js"></script>
+</body>
+</html>
